@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('download (5).jpg'); /* removi as barras pois podem quebrar */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #00000080;
+}
+
+/* ======== NEON TITLE ======== */
+.title {
+    font-size: calc(10px + 3vw);
+    color: #00eaff;
+    text-shadow: 0 0 8px #00eaff,
+                 0 0 16px #00eaff,
+                 0 0 32px #00eaff;
+}
+
+.title p {
+    font-size: calc(10px + 1vw);
+    color: #b3faff;
+    text-shadow: 0 0 5px #00eaff;
+}
+
+/* ======== NEON COUNTDOWN ======== */
+.countdown{
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.countdown h1{
+    font-size: calc(10px + 8vw);
+    color: #00eaff;
+    text-shadow: 
+        0 0 5px #00eaff,
+        0 0 15px #00eaff,
+        0 0 30px #00eaff,
+        0 0 45px cyan;
+    transition: 0.2s;
+}
+
+/* Efeito neon pulsando */
+@keyframes neonPulse {
+    0% { text-shadow: 0 0 8px cyan, 0 0 25px cyan; }
+    50% { text-shadow: 0 0 18px cyan, 0 0 45px cyan; }
+    100% { text-shadow: 0 0 8px cyan, 0 0 25px cyan; }
+}
+
+.countdown h1 {
+    animation: neonPulse 2s infinite alternate;
+}
+
+/* ======== NEON BUTTON ======== */
+.button{
+    background-color: transparent;
+    color: #00eaff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #00eaff;
+    font-size: 20px;
+    border-radius: 5px;
+    text-shadow: 0 0 8px #00eaff;
+    box-shadow: 0 0 10px #00eaff;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #00eaff;
+    color: black;
+    box-shadow: 
+        0 0 12px #00eaff,
+        0 0 25px #00eaff,
+        0 0 50px cyan;
+}
